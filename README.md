@@ -1,4 +1,4 @@
-# cldr-data-npm
+# cldr-data-full-npm
 
 Npm module for [Unicode CLDR JSON][] data
 
@@ -10,13 +10,13 @@ On the `package.json` of your i18n library, define which CLDR versions it's
 compatible with.
 
     "dependencies": {
-      "cldr-data": ">26"
+      "cldr-data-full": ">26"
     }
 
-On your library, access CLDR JSON data using `require("cldr-data")`.
+On your library, access CLDR JSON data using `require("cldr-data-full")`.
 
 ```javascript
-cldr = require("cldr-data");
+cldr = require("cldr-data-full");
 
 function Pluralize(locale) {
   var plurals = cldr("supplemental/plurals");
@@ -31,13 +31,13 @@ function Pluralize(locale) {
 }
 ```
 
-For your convinience, use cldr-data in conjunction of [cldr.js][].
+For your convinience, use cldr-data-full in conjunction of [cldr.js][].
 
 [cldr.js]: https://github.com/rxaviers/cldrjs
 
 ```javascript
 Cldr = require("cldrjs")
-cldr = require("cldr-data");
+cldr = require("cldr-data-full");
 
 Cldr.load(cldr("supplemental/plurals"));
 
