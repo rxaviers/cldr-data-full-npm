@@ -12,7 +12,7 @@ var cldrDownloader = require("cldr-data-downloader");
 var path = require("path");
 
 cldrDownloader(
-  "http://www.unicode.org/Public/cldr/26/json-full.zip",
+  "http://www.unicode.org/Public/cldr/25/json_full.zip",
   path.join(__dirname, "json"),
   function(error) {
     if (error) {
